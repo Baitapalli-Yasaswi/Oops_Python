@@ -1,4 +1,4 @@
-""""
+
 class BankAccount:
 
     def __init__(self, owner, balance):
@@ -18,10 +18,10 @@ my_account.deposite(500)
 my_account.deposite(690)
 
 print(my_account.get_balance()) 
-"""
 
 
-"""
+
+
 # About students:
 
 class student:
@@ -43,10 +43,9 @@ print(student.get_name())
 student.set_age(25)
 print(student.get_age())  
 student.set_age(150)
-""" 
 
 # The smart phone battery level:
-"""
+
 class smartphone:
     def __init__(self, brand, battery_level):
         self.__brand = brand
@@ -73,7 +72,7 @@ myphone.charge(50)
 #print(myphone1.get_brand())
 #print(myphone1.get_battery_level())
 #myphone1.charge(30) 
-""" 
+
 
 # Paradise movie, Booking tickets process:
 class MovieTheater:
@@ -95,4 +94,4 @@ class MovieTheater:
 Sandhya_Theater = MovieTheater("Paradise",25)
 print(Sandhya_Theater.get_Movietitle())
 print(Sandhya_Theater.get_Available_seats())
-Sandhya_Theater.Booking_Tickets(15)
+Sandhya_Theater.Booking_Tickets(15) 
