@@ -97,4 +97,60 @@ Sandhya_Theater = MovieTheater("Paradise",25)
 print(Sandhya_Theater.get_Movietitle())
 print(Sandhya_Theater.get_Available_seats())
 Sandhya_Theater.Booking_Tickets(15)
+""" 
+
 """
+class Rectangle:
+    def __init__(self):
+        self.__length = 0.0
+        self.__width = 0.0
+# setter method:
+    def set_length(self,length):
+        if length >0:
+            self._length = length
+        else:
+            print("Length must be in positive value")
+    def set_width(self,width):
+        if width >0:
+            self._width = width
+        else:
+            print("width must be in positive value")                 
+    # getter method:     
+    def get_length(self):
+        return self.length
+    def get_width(self):
+        return self.width
+
+    def calculate_area(self):
+        return self._length*self._width 
+if __name__ == "__main__":
+    rec = Rectangle()
+
+    rec.set_length(5.6)
+    rec.set_width(3.0)     
+
+    print(f"Area:{rec.calculate_area()}") 
+""" 
+
+class BankAccount:
+    def __init__(self,balance):
+        self.__balance = balance
+    def get_balance(self):
+        return self.__balance
+    def deposite(self,amount):
+        if amount>0:
+            self.__balance += amount 
+        else:
+            print("It is an error") 
+    def withdraw(self,amount):
+        if amount>0:            
+            self.__balance -= amount
+        else:
+            print("It is invalid")
+#account_balance = 5000
+account_balance = BankAccount(0)
+account_balance.deposite(500)
+account_balance.withdraw(200)
+print(account_balance.get_balance())                            
+
+    
