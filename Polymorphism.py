@@ -1,4 +1,3 @@
-
 class Netflix:
     def play_media(self,Name):
         return f"Streaming Hd movie:{Name} from Netflix."
@@ -18,7 +17,6 @@ remote_control_button(spotify,"Raja")
 remote_control_button(youtube,"Code_with_Harry")    
 
 
-"""
 class Netflix:
     def __init__(self,Name):
         self.Name = Name
@@ -42,9 +40,9 @@ youtube = Youtube("Oops")
 remote_control_button(netflix)
 remote_control_button(spotify)
 remote_control_button(youtube)
-""" 
 
-"""
+
+
 class CreditCardpayment:
     def process_payment(self,amount):
         #self.amount = amount
@@ -65,12 +63,12 @@ GPP = Googlepaypayment()
 checkout(CCP,1000)
 checkout(PPP,700)
 checkout(GPP, 300)
-""" 
+
 
 
 
 # EXAMPLE "NOT TO DO" Method Overloading:
-"""
+
 class MathOperations:
     def add(self,a,b,c):
         self.a = a
@@ -91,19 +89,19 @@ math = MathOperations()
 print(math.add(10,20,30))
 print(math.sub(30,10,10))
 print(math.mul(10,20,30))
-""" 
+
 
 # Method Overloading:
-"""
+
 class MathOperations:
     def add(self,a,b,c):
         return f"Addition of three numbers are :{a+b+c}"
 math = MathOperations()
 print(math.add(10,20,30))    
-"""
 
 
-"""
+
+
 # Method Overriding:
 class Payment:
     def Process_Payment(self,Amount):
@@ -117,15 +115,16 @@ class Googlepayment(Payment):
 payments = [Creditcardpayment(), Googlepayment()]
 for p in payments:
     print(p.Process_Payment(1000))
-""" 
 
-"""
+
+
 payment_method_1 = Creditcardpayment()
 print(payment_method_1.Process_Payment(1000)) 
 payment_method_2 = Googlepayment()   
 print(payment_method_2.Process_Payment(3500))
-""" 
-"""
+
+
+
 class Notifications:
     def send_Notifications(self,Message):
         return "Sending Notifications."
@@ -139,7 +138,7 @@ Notification1 = WhatsApp()
 print(Notification1.send_Notifications("Your order delivered successfully!"))
 Notification2 = Email()
 print(Notification2.send_Notifications("We are Hiring you as a Project_Manager in WXT company\nCongratulation!"))         
-"""
+
 
 # Method Overloading: 
 class SmartLight:
