@@ -155,4 +155,21 @@ Light.action(2)
 Light.action(0)
 
 
-                       
+# Operator Overloading:
+class point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    def __add__(self,other):
+        return point(self.x+other.x, self.y+other.y)
+    def __sub__(self,other):
+        return point(self.x-other.x, self.y-other.y)
+
+p1 = point(10,20)
+p2 = point(5,10)
+p3 = p1+p2
+print((p3.x,p3.y))
+print(f"Addition of two points:({p3.x},{p3.y}))")
+p4 = p1-p2
+print(f"Subtraction of two points:({p4.x},{p4.y}))")
+print((p4.x,p4.y)) 
