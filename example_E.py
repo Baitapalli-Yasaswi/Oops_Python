@@ -127,4 +127,86 @@ class Dog():
         return f"{self.Name} {self.Speciality} at night!,everyday!"
 dog = Dog("Buddy",12,"Barks") 
 print(dog.get_details())  
-print(dog.Speciality())               
+print(dog.Speciality())          
+
+
+
+
+
+
+
+
+
+
+
+
+from abc import ABC, abstractmethod 
+
+class Restaurant(ABC):
+
+    def __init__(self,name):
+        self.name = name
+
+    @abstractmethod
+    def prepare_food(self):
+        pass
+
+    def print_bill(self,item,price):
+        return f"Bill for {item} is ${price}."
+
+class ItalianRestaurant(Restaurant):
+    def prepare_food(self,name,item):
+        return f"Preparing delicious {item} at {name}."
+class AmericanRestaurant(Restaurant):
+    def prepare_food(self,name,item):
+        return f"Preparing tasty {item} at {name}."
+
+Restaurant1 = ItalianRestaurant("Gastronomia")
+print(Restaurant1.prepare_food(Restaurant1.name,"pasta"))
+Restaurant2 = AmericanRestaurant("Burger King")
+print(Restaurant2.prepare_food(Restaurant2.name,"Burger"))      
+ 
+
+from abc import ABC, abstractmethod 
+class Vehicle(ABC):
+    def __init__(self,Brand,Model):
+        self.Brand=Brand
+        self.Model=Model
+    @abstractmethod
+    def perform_service(self):
+        pass
+
+class Car(Vehicle):
+    def perform_service(self):
+        return f"Performance service for {self.Brand} {self.Model} is completed"
+
+class Bike(Vehicle):
+    def perform_service(self):
+        #pass 
+        return f"Performance service for {self.Brand} {self.Model} is completed"        
+vehicle1 = Bike("Honda", "CBR")
+print(vehicle1.perform_service())
+print("Did it reach here?") 
+vehicle2 = Car("Toyota", "Camry")
+print(vehicle2.perform_service())    
+
+
+# Notification System:
+from abc import ABC, abstractmethod
+class NotificationSender(ABC):
+    @abstractmethod
+    def send_notification(self,message):
+        pass
+
+class EmailNotification(NotificationSender):
+    def send_notification(self,user,message):
+        return f"Sending email to {user}: {message}"
+
+class WhatsAppNotification(NotificationSender):
+    def send_notification(self,user,message):
+        return f"Sending WhatsApp message to {user}: {message}"
+
+Remainder1 = EmailNotification()        
+print(Remainder1.send_notification("Raghu", "Your order has been shipped."))
+Remainder2 = WhatsAppNotification()
+print(Remainder2.send_notification("Sreekar", "Your appointment is confirmed."))
